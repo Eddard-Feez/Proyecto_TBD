@@ -18,6 +18,5 @@ namespace ProyectoTBD
             conectar.Open();
             return conectar;
         }
-
     }
 }
