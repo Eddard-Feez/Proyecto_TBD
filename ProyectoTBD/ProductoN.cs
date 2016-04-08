@@ -15,8 +15,8 @@ namespace ProyectoTBD
 
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into cat_productos (id_producto, desc_producto, id_unidad_medida, cantidad, p_u_compra puCompra, p_u_venta, id_departamento, cantidad_min, iva, p_u_mayoreo, p_s_mayoreo) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
-                pProducto.IdProducto, pProducto.Desc, pProducto.IdUnidadMed, pProducto.Cantidad, pProducto.PrecioUC, pProducto.PrecioUV, pProducto.IdDepartamento, pProducto.CantidadMin, pProducto.IVA, pProducto.PrecioUM, pProducto.PrecioSM ), Conexion.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into tproductos (idProducto, descProducto, puCompra, puVenta, Cantidad, iva, idDepartamento, puMayoreo, psMayoreo) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+                pProducto.IdProducto, pProducto.Desc, pProducto.PrecioUC, pProducto.PrecioUV, pProducto.Cantidad, pProducto.IVA, pProducto.IdDepartamento, pProducto.PrecioUM, pProducto.PrecioSM ), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
 
@@ -25,27 +25,25 @@ namespace ProyectoTBD
 
 
 
-        public static List<Producto> Buscar( string pDesc)
+        public static List<Producto> Buscar(int pIdProducto, string pDesc)
         {
             List<Producto> _lista = new List<Producto>();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT  id_producto, desc_producto, id_unidad_medida, p_u_compra, p_u_venta, cantidad, iva, id_departamento, cantidad_min p_u_mayoreo, p_s_mayoreo FROM cat_productos  where descProducto='{0}'", pDesc), Conexion.ObtenerConexion());
+           "SELECT idProducto, descProducto, puCompra, puVenta, Cantidad, iva, idDepartamento, puMayoreo, psMayoreo FROM tproductos  where idProducto ='{0}' or descProducto='{1}'", pIdProducto, pDesc), Conexion.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
                 Producto pProducto = new Producto();
                 pProducto.IdProducto = _reader.GetInt32(0);
                 pProducto.Desc = _reader.GetString(1);
-                pProducto.IdUnidadMed = _reader.GetInt32(0);
-                pProducto.PrecioUC = _reader.GetDecimal(0);
-                pProducto.PrecioUV = _reader.GetDecimal(0);
-                pProducto.Cantidad = _reader.GetDecimal(0);
+                pProducto.PrecioUC= _reader.GetInt32(0);
+                pProducto.PrecioUV = _reader.GetInt32(0);
+                pProducto.Cantidad = _reader.GetInt32(0);
                 pProducto.IVA = _reader.GetInt32(0);
-                pProducto.IdDepartamento = _reader.GetInt32(0);
-                pProducto.PrecioUM = _reader.GetDecimal(0);
-                pProducto.PrecioSM = _reader.GetDecimal(0);
-                pProducto.CantidadMin = _reader.GetDecimal(0);
+                pProducto.IdDepartamento = _reader.GetString(4);
+                pProducto.PrecioUM = _reader.GetInt32(0);
+                pProducto.PrecioSM = _reader.GetInt32(0);
 
 
 
@@ -67,18 +65,15 @@ namespace ProyectoTBD
             while (_reader.Read())
             {
 
-                //Producto pProducto = new Producto();
                 pProducto.IdProducto = _reader.GetInt32(0);
                 pProducto.Desc = _reader.GetString(1);
-                pProducto.IdUnidadMed = _reader.GetInt32(0);
-                pProducto.PrecioUC = _reader.GetDecimal(0);
-                pProducto.PrecioUV = _reader.GetDecimal(0);
-                pProducto.Cantidad = _reader.GetDecimal(0);
+                pProducto.PrecioUC = _reader.GetInt32(0);
+                pProducto.PrecioUC = _reader.GetInt32(0);
+                pProducto.Cantidad = _reader.GetInt32(0);
                 pProducto.IVA = _reader.GetInt32(0);
-                pProducto.IdDepartamento = _reader.GetInt32(0);
-                pProducto.PrecioUM = _reader.GetDecimal(0);
-                pProducto.PrecioSM = _reader.GetDecimal(0);
-                pProducto.CantidadMin = _reader.GetDecimal(0);
+                pProducto.IdDepartamento = _reader.GetString(4);
+                pProducto.PrecioUM = _reader.GetInt32(0);
+                pProducto.PrecioSM = _reader.GetInt32(0);
 
             }
 
@@ -94,8 +89,8 @@ namespace ProyectoTBD
             int retorno = 0;
             MySqlConnection conexion = Conexion.ObtenerConexion();
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Update cat_productos set desc_producto ='{0}', id_unidad_medida ='{1}', cantidad ='{2}', p_u_compra ='{3}', p_u_venta ='{4}', id_departamento ='{5}', cantidad_min ='{6}', iva ='{7}',p_u_mayoreo = '{8}', p_s_mayoreo = '{9}' where idProducto={10}",
-                 pProducto.Desc, pProducto.IdUnidadMed, pProducto.Cantidad, pProducto.PrecioUC, pProducto.PrecioUV, pProducto.IdDepartamento, pProducto.CantidadMin, pProducto.IVA,pProducto.PrecioUM,pProducto.PrecioSM, pProducto.IdProducto), conexion);
+            MySqlCommand comando = new MySqlCommand(string.Format("Update tproductos set descProducto ='{0}', puCompra ='{1}', puVenta ='{2}', Cantidad ='{3}', iva ='{4}', idDepartamento ='{5}', puMayoreo ='{6}', psMayoreo ='{7}' where idProducto={7}",
+                 pProducto.Desc, pProducto.PrecioUC, pProducto.PrecioUC, pProducto.Cantidad, pProducto.IVA, pProducto.IdDepartamento, pProducto.PrecioUM, pProducto.PrecioUM, pProducto.IdProducto), conexion);
 
             retorno = comando.ExecuteNonQuery();
             conexion.Close();
@@ -110,7 +105,7 @@ namespace ProyectoTBD
             int retorno = 0;
             MySqlConnection conexion = Conexion.ObtenerConexion();
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Delete From cat_cliente where idcat_cliente={0}", pIdProducto), conexion);
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete From clientes where IdCliente={0}", pIdProducto), conexion);
 
             retorno = comando.ExecuteNonQuery();
             conexion.Close();

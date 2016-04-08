@@ -15,8 +15,8 @@ namespace ProyectoTBD
 
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into users (UserName, UserPassword, Paterno, Materno, Nombre,Ventas) values ('{0}','{1}','{2}','{3}','{4}','{5}')",
-               pUsuarios.UserName, pUsuarios.UserPassword, pUsuarios.Paterno, pUsuarios.Materno, pUsuarios.Nombre, pUsuarios.Ventas), Conexion.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into users (UserName, UserPassword, Paterno, Materno, Nombre) values ('{0}','{1}','{2}','{3}','{4}')",
+               pUsuarios.UserName, pUsuarios.UserPassword, pUsuarios.Paterno, pUsuarios.Materno, pUsuarios.Nombre), Conexion.ObtenerConexion());
 
 
             //MySqlCommand comando = new MySqlCommand(string.Format("Insert into users (UserName, UserPasword, Paterno, Materno, Nombre, Ventas, Administrar, Reportes, Catalogos, Consultas, DeshacerVenta) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')",

@@ -28,7 +28,7 @@ namespace ProyectoTBD
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtdescProducto.Text) ||
+            if (string.IsNullOrWhiteSpace(txtidProducto.Text) || string.IsNullOrWhiteSpace(txtdescProducto.Text) ||
                             string.IsNullOrWhiteSpace(txtpuCompra.Text) || string.IsNullOrWhiteSpace(txtpuVenta.Text) ||
                             string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(txtiva.Text) ||
                             string.IsNullOrWhiteSpace(txtidDepartamento.Text) || string.IsNullOrWhiteSpace(txtpuMayoreo.Text) ||
@@ -52,82 +52,47 @@ namespace ProyectoTBD
                 Producto pProducto = new Producto();
 
                 int convertir1;
-                pProducto.IdProducto = convertir1 = Convert.ToInt32(txtIdProducto.Text);
-                convertir1 = int.Parse(txtIdProducto.Text);
-
-                pProducto.Desc = txtdescProducto.Text.Trim();
+                pProducto.IdProducto = convertir1 = Convert.ToInt32(txtidProducto.Text);
+                convertir1 = int.Parse(txtidProducto.Text);
 
                 int convertir2;
-                pProducto.IdUnidadMed = convertir2 = Convert.ToInt32(txtIdUnidadMed.Text);
-                convertir2 = int.Parse(txtIdUnidadMed.Text);
+                pProducto.PrecioUC = convertir2 = Convert.ToInt32(txtpuCompra.Text);
+                convertir2 = int.Parse(txtpuCompra.Text);
 
-                decimal convertir3;
-                pProducto.Cantidad = convertir3 = Convert.ToDecimal(txtCantidad.Text);
-                convertir3 = decimal.Parse(txtCantidad.Text);
+                int convertir3;
+                pProducto.PrecioUV = convertir3 = Convert.ToInt32(txtpuVenta.Text);
+                convertir3 = int.Parse(txtpuVenta.Text);
 
-                decimal convertir4;
-                pProducto.PrecioUC = convertir4 = Convert.ToDecimal(txtpuCompra.Text);
-                convertir4 = decimal.Parse(txtpuCompra.Text);
+                int convertir4;
+                pProducto.Cantidad = convertir4 = Convert.ToInt32(txtCantidad.Text);
+                convertir4 = int.Parse(txtCantidad.Text);
 
-                decimal convertir5;
-                pProducto.PrecioUV = convertir5 = Convert.ToDecimal(txtpuVenta.Text);
-                convertir5 = decimal.Parse(txtpuVenta.Text);
+                int convertir5;
+                pProducto.IVA = convertir5 = Convert.ToInt32(txtiva.Text);
+                convertir5 = int.Parse(txtiva.Text);
 
                 int convertir6;
-                pProducto.IdDepartamento = convertir6 = Convert.ToInt32(txtidDepartamento.Text);
-                convertir6 = int.Parse(txtidDepartamento.Text);
+                pProducto.PrecioUM = convertir6 = Convert.ToInt32(txtpuMayoreo.Text);
+                convertir6 = int.Parse(txtpuMayoreo.Text);
 
-                decimal convertir7;
-                pProducto.CantidadMin = convertir7 = Convert.ToDecimal(txtCantidadMin.Text);
-                convertir7 = decimal.Parse(txtCantidadMin.Text);
-
-                int convertir8;
-                pProducto.IVA = convertir8 = Convert.ToInt32(txtiva.Text);
-                convertir8 = int.Parse(txtiva.Text);
-
-                decimal convertir9;
-                pProducto.PrecioUM = convertir9 = Convert.ToDecimal(txtpuMayoreo.Text);
-                convertir9 = decimal.Parse(txtpuMayoreo.Text);
-
-                decimal convertir10;
-                pProducto.PrecioSM = convertir10 = Convert.ToDecimal(txtpsMayoreo.Text);
-                convertir10 = decimal.Parse(txtpsMayoreo.Text);
-                //int convertir3;
-                //pProducto.PrecioUV = convertir3 = Convert.ToInt32(txtpuVenta.Text);
-                //convertir3 = int.Parse(txtpuVenta.Text);
-
-                //int convertir4;
-                //pProducto.Cantidad = convertir4 = Convert.ToInt32(txtCantidad.Text);
-                //convertir4 = int.Parse(txtCantidad.Text);
-
-                //int convertir5;
-                //pProducto.IVA = convertir5 = Convert.ToInt32(txtiva.Text);
-                //convertir5 = int.Parse(txtiva.Text);
-
-                //int convertir6;
-                //pProducto.PrecioUM = convertir6 = Convert.ToInt32(txtpuMayoreo.Text);
-                //convertir6 = int.Parse(txtpuMayoreo.Text);
-
-                //int convertir7;
-                //pProducto.PrecioSM = convertir7 = Convert.ToInt32(txtpsMayoreo.Text);
-                //convertir7 = int.Parse(txtpsMayoreo.Text);
-
-                //int convertir8;
-                //pProducto.IdDepartamento = convertir7 = Convert.ToInt32(txtidDepartamento.Text);
-                //convertir8 = int.Parse(txtidDepartamento.Text);
+                int convertir7;
+                pProducto.PrecioSM = convertir7 = Convert.ToInt32(txtpsMayoreo.Text);
+                convertir7 = int.Parse(txtpsMayoreo.Text);
 
 
-                //pProducto.IdDepartamento = txtidDepartamento.Text.Trim();
+
+                pProducto.Desc = txtdescProducto.Text.Trim();
+                pProducto.IdDepartamento = txtidDepartamento.Text.Trim();
 
 
 
                 //pProducto.IdProducto = txtidProducto.TextLength;
-
+               
                 ////pProducto.PrecioUC = txtpuCompra.TextLength;
                 ////pProducto.PrecioUV = txtpuVenta.TextLength;
                 //pProducto.Cantidad = txtCantidad.TextLength;
                 //pProducto.IVA = txtiva.TextLength;
-
+                
                 //pProducto.PrecioUM = txtpuMayoreo.TextLength;
                 //pProducto.PrecioSM = txtpsMayoreo.TextLength;
 
@@ -136,13 +101,13 @@ namespace ProyectoTBD
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Producto agregado !", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                     Deshabilitar();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar el producto", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -230,7 +195,7 @@ namespace ProyectoTBD
 
 
 
-            txtIdProducto.Clear();
+            txtidProducto.Clear();
             txtdescProducto.Clear();
             txtidDepartamento.Clear();
             txtpuCompra.Clear();
@@ -246,7 +211,7 @@ namespace ProyectoTBD
 
         void Habilitar()
         {
-            txtIdProducto.Enabled = true;
+            txtidProducto.Enabled = true;
             txtdescProducto.Enabled = true;
             txtidDepartamento.Enabled = true;
             txtpuCompra.Enabled = true;
@@ -264,7 +229,7 @@ namespace ProyectoTBD
 
         void Deshabilitar()
         {
-            txtIdProducto.Enabled = false;
+            txtidProducto.Enabled = false;
             txtdescProducto.Enabled = false;
             txtidDepartamento.Enabled = false;
             txtpuCompra.Enabled = false;
@@ -286,7 +251,7 @@ namespace ProyectoTBD
         {
 
 
-            if (string.IsNullOrWhiteSpace(txtIdProducto.Text) || string.IsNullOrWhiteSpace(txtdescProducto.Text) ||
+            if (string.IsNullOrWhiteSpace(txtidProducto.Text) || string.IsNullOrWhiteSpace(txtdescProducto.Text) ||
                              string.IsNullOrWhiteSpace(txtpuCompra.Text) || string.IsNullOrWhiteSpace(txtpuVenta.Text) ||
                              string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(txtiva.Text) ||
                              string.IsNullOrWhiteSpace(txtidDepartamento.Text) || string.IsNullOrWhiteSpace(txtpuMayoreo.Text) ||
@@ -298,48 +263,36 @@ namespace ProyectoTBD
             {
 
                 Producto pProducto = new Producto();
-
                 int convertir1;
-                pProducto.IdProducto = convertir1 = Convert.ToInt32(txtIdProducto.Text);
-                convertir1 = int.Parse(txtIdProducto.Text);
-
-                pProducto.Desc = txtdescProducto.Text.Trim();
+                pProducto.IdProducto = convertir1 = Convert.ToInt32(txtidProducto.Text);
+                convertir1 = int.Parse(txtidProducto.Text);
 
                 int convertir2;
-                pProducto.IdUnidadMed = convertir2 = Convert.ToInt32(txtIdUnidadMed.Text);
-                convertir2 = int.Parse(txtIdUnidadMed.Text);
+                pProducto.PrecioUC = convertir2 = Convert.ToInt32(txtpuCompra.Text);
+                convertir2 = int.Parse(txtpuCompra.Text);
 
-                decimal convertir3;
-                pProducto.Cantidad = convertir3 = Convert.ToDecimal(txtCantidad.Text);
-                convertir3 = decimal.Parse(txtCantidad.Text);
+                int convertir3;
+                pProducto.PrecioUV = convertir3 = Convert.ToInt32(txtpuVenta.Text);
+                convertir3 = int.Parse(txtpuVenta.Text);
 
-                decimal convertir4;
-                pProducto.PrecioUC = convertir4 = Convert.ToDecimal(txtpuCompra.Text);
-                convertir4 = decimal.Parse(txtpuCompra.Text);
+                int convertir4;
+                pProducto.Cantidad = convertir4 = Convert.ToInt32(txtCantidad.Text);
+                convertir4 = int.Parse(txtCantidad.Text);
 
-                decimal convertir5;
-                pProducto.PrecioUV = convertir5 = Convert.ToDecimal(txtpuVenta.Text);
-                convertir5 = decimal.Parse(txtpuVenta.Text);
+                int convertir5;
+                pProducto.IVA = convertir5 = Convert.ToInt32(txtiva.Text);
+                convertir5 = int.Parse(txtiva.Text);
 
                 int convertir6;
-                pProducto.IdDepartamento = convertir6 = Convert.ToInt32(txtidDepartamento.Text);
-                convertir6 = int.Parse(txtidDepartamento.Text);
+                pProducto.PrecioUM = convertir6 = Convert.ToInt32(txtpuMayoreo.Text);
+                convertir6 = int.Parse(txtpuMayoreo.Text);
 
-                decimal convertir7;
-                pProducto.CantidadMin = convertir7 = Convert.ToDecimal(txtCantidadMin.Text);
-                convertir7 = decimal.Parse(txtCantidadMin.Text);
+                int convertir7;
+                pProducto.PrecioSM = convertir7 = Convert.ToInt32(txtpsMayoreo.Text);
+                convertir7 = int.Parse(txtpsMayoreo.Text);
 
-                int convertir8;
-                pProducto.IVA = convertir8 = Convert.ToInt32(txtiva.Text);
-                convertir8 = int.Parse(txtiva.Text);
-
-                decimal convertir9;
-                pProducto.PrecioUM = convertir9 = Convert.ToDecimal(txtpuMayoreo.Text);
-                convertir9 = decimal.Parse(txtpuMayoreo.Text);
-
-                decimal convertir10;
-                pProducto.PrecioSM = convertir10 = Convert.ToDecimal(txtpsMayoreo.Text);
-                convertir10 = decimal.Parse(txtpsMayoreo.Text);
+                pProducto.Desc = txtdescProducto.Text.Trim();
+                pProducto.IdDepartamento = txtidDepartamento.Text.Trim();
 
                 if (ProductoN.Actualizar(pProducto) > 0)
                 {
@@ -421,19 +374,15 @@ namespace ProyectoTBD
                 //pProducto.Desc = txtdescProducto.Text.Trim();
                 //pProducto.IdDepartamento = txtidDepartamento.Text.Trim();
 
-
-
-                buscar.ProductoSelecionado.IdProducto = Convert.ToInt32(txtIdProducto.Text);
-                buscar.ProductoSelecionado.Desc= txtdescProducto.Text ;
-                buscar.ProductoSelecionado.IdUnidadMed = Convert.ToInt32(txtIdUnidadMed.Text);
-                buscar.ProductoSelecionado.Cantidad = Convert.ToDecimal(txtCantidad.Text);
-                buscar.ProductoSelecionado.PrecioUC = Convert.ToDecimal(txtpuCompra.Text);
-                buscar.ProductoSelecionado.PrecioUV = Convert.ToDecimal(txtpuVenta.Text);
-                buscar.ProductoSelecionado.IdDepartamento = Convert.ToInt32(txtidDepartamento.Text);
-                buscar.ProductoSelecionado.CantidadMin= Convert.ToDecimal(txtCantidadMin.Text);
+                buscar.ProductoSelecionado.IdProducto = Convert.ToInt32(txtidProducto.Text);
+                txtdescProducto.Text = buscar.ProductoSelecionado.Desc;
+                txtidDepartamento.Text = buscar.ProductoSelecionado.IdDepartamento;
+                buscar.ProductoSelecionado.PrecioUC = Convert.ToInt32(txtpuCompra.Text);
+                buscar.ProductoSelecionado.PrecioUV = Convert.ToInt32(txtpuVenta.Text);
+                buscar.ProductoSelecionado.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 buscar.ProductoSelecionado.IVA = Convert.ToInt32(txtiva.Text);
-                buscar.ProductoSelecionado.PrecioUM = Convert.ToDecimal(txtpuMayoreo.Text);
-                buscar.ProductoSelecionado.PrecioSM = Convert.ToDecimal(txtpsMayoreo.Text);
+                buscar.ProductoSelecionado.PrecioUM = Convert.ToInt32(txtpuMayoreo.Text);
+                buscar.ProductoSelecionado.PrecioSM = Convert.ToInt32(txtpsMayoreo.Text);
 
 
                 btnActualizar.Enabled = true;
@@ -441,11 +390,6 @@ namespace ProyectoTBD
                 Habilitar();
                 btnGuardar.Enabled = false;
             }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

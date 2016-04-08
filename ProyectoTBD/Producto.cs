@@ -11,32 +11,28 @@ namespace ProyectoTBD
 
         public int IdProducto { get; set; }
         public string Desc { get; set; }
-        public int IdUnidadMed { get; set; }
-        public decimal PrecioUC { get; set; }
-        public decimal PrecioUV { get; set; }
-        public decimal Cantidad { get; set; }
+        public int PrecioUC { get; set; }
+        public int PrecioUV { get; set; }
+        public int Cantidad { get; set; }
         public int IVA { get; set; }
-        public int IdDepartamento { get; set; }
-        public decimal PrecioUM { get; set; }
-        public decimal PrecioSM { get; set; }
-        public decimal CantidadMin { get; set; }
+        public string IdDepartamento { get; set; }
+        public int PrecioUM { get; set; }
+        public int PrecioSM { get; set; }
 
 
         public Producto() { }
 
-        public Producto(int pIdProducto, string pDesc,int pIdUnidadMed, int pIdDepartamento, decimal pPrecioUC, decimal pPrecioUV, decimal PCantidad,decimal pCantidadMin, int pIVA, decimal pPrecioUM, decimal pPrecioSM)
+        public Producto(int pIdProducto, string pDesc, string pIdDepartamento, int pPrecioUC, int pPrecioUV, int PCantidad, int pIVA, int pPrecioUM, int pPrecioSM)
         {
             this.IdProducto = pIdProducto;
             this.Desc = pDesc;
             this.IdDepartamento = pIdDepartamento;
-            this.IdUnidadMed = pIdUnidadMed;
             this.PrecioUC = pPrecioUC;
             this.PrecioUV = pPrecioUV;
             this.Cantidad = PCantidad;
             this.IVA = pIVA;
             this.PrecioUM = pPrecioUM;
             this.PrecioSM = pPrecioSM;
-            this.CantidadMin = pCantidadMin;
         }
 
     }

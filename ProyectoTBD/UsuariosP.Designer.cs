@@ -45,7 +45,6 @@
             this.cbDeshacerVenta = new System.Windows.Forms.CheckBox();
             this.cbVentas = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +137,6 @@
             this.cbAdministrar.TabIndex = 10;
             this.cbAdministrar.Text = "Administrar";
             this.cbAdministrar.UseVisualStyleBackColor = true;
-            this.cbAdministrar.CheckedChanged += new System.EventHandler(this.cbAdministrar_CheckedChanged);
             // 
             // cbReportes
             // 
@@ -149,7 +147,6 @@
             this.cbReportes.TabIndex = 11;
             this.cbReportes.Text = "Reportes";
             this.cbReportes.UseVisualStyleBackColor = true;
-            this.cbReportes.CheckedChanged += new System.EventHandler(this.cbReportes_CheckedChanged);
             // 
             // cbCatalogos
             // 
@@ -160,7 +157,6 @@
             this.cbCatalogos.TabIndex = 12;
             this.cbCatalogos.Text = "Catalogos";
             this.cbCatalogos.UseVisualStyleBackColor = true;
-            this.cbCatalogos.CheckedChanged += new System.EventHandler(this.cbCatalogos_CheckedChanged);
             // 
             // cbConsultas
             // 
@@ -171,7 +167,6 @@
             this.cbConsultas.TabIndex = 13;
             this.cbConsultas.Text = "Consultas";
             this.cbConsultas.UseVisualStyleBackColor = true;
-            this.cbConsultas.CheckedChanged += new System.EventHandler(this.cbConsultas_CheckedChanged);
             // 
             // cbDeshacerVenta
             // 
@@ -182,7 +177,6 @@
             this.cbDeshacerVenta.TabIndex = 14;
             this.cbDeshacerVenta.Text = "Deshacer ventas";
             this.cbDeshacerVenta.UseVisualStyleBackColor = true;
-            this.cbDeshacerVenta.CheckedChanged += new System.EventHandler(this.cbDeshacerVenta_CheckedChanged);
             // 
             // cbVentas
             // 
@@ -193,34 +187,22 @@
             this.cbVentas.TabIndex = 15;
             this.cbVentas.Text = "Ventas";
             this.cbVentas.UseVisualStyleBackColor = true;
-            this.cbVentas.CheckedChanged += new System.EventHandler(this.cbVentas_CheckedChanged);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(272, 166);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(59, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 16;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Location = new System.Drawing.Point(337, 166);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(64, 23);
-            this.btnRegresar.TabIndex = 17;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // UsuariosP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 207);
-            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cbVentas);
             this.Controls.Add(this.cbDeshacerVenta);
@@ -264,6 +246,5 @@
         private System.Windows.Forms.CheckBox cbDeshacerVenta;
         private System.Windows.Forms.CheckBox cbVentas;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnRegresar;
     }
 }

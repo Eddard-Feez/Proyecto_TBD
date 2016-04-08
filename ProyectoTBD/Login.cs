@@ -50,13 +50,12 @@ namespace ProyectoTBD
 
         }
 
-        private void txtRegistrar_Click(object sender, EventArgs e)
+      
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             UsuariosP reg = new UsuariosP();
-            reg.ShowDialog();
+             reg.ShowDialog();
         }
-
-        
     }
 }

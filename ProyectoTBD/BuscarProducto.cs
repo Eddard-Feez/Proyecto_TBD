@@ -50,9 +50,9 @@ namespace ProyectoTBD
             //pProducto.IdProducto = convertir1 = Convert.ToInt32(txtidProducto.Text);
             //convertir1 = int.Parse(txtidProducto.Text);
 
-            //int enterr;
-            datos.DataSource = ProductoN.Buscar ( txtdescProducto.Text);
-            //enterr = int.Parse(txtidProducto.Text);
+            int enterr;
+            datos.DataSource = ProductoN.Buscar((enterr = Convert.ToInt32(txtidProducto.Text)), txtdescProducto.Text);
+            enterr = int.Parse(txtidProducto.Text);
 
         }
 
@@ -73,7 +73,5 @@ namespace ProyectoTBD
         {
             this.Close();
         }
-
-      
     }
 }

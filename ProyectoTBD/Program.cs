@@ -16,7 +16,7 @@ namespace ProyectoTBD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formAccesoMySQL());
+            Application.Run(new PantallaP());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace ProyectoTBD
         public string Nombre { get; set; }
         public string Paterno { get; set; }
         public string Materno { get; set; }
-        public bool Ventas { get; set; }
+        //public Boolean Ventas { get; set; }
         //public Boolean Administrar { get; set; }
         //public Boolean Reporte { get; set; }
         //public Boolean Catalogo { get; set; }
@@ -24,7 +24,7 @@ namespace ProyectoTBD
         public Usuarios() { }
 
         //public Usuarios(string pUserName, string pUserPassword, string pNombre, string pPaterno, string pMaterno, Boolean pVentas, Boolean pAdministrar, Boolean pReporte, Boolean pCatalogo, Boolean pConsulta, Boolean pDeshacerVenta)
-        public Usuarios(string pUserName, string pUserPassword, string pNombre, string pPaterno, string pMaterno, bool pVentas)
+        public Usuarios(string pUserName, string pUserPassword, string pNombre, string pPaterno, string pMaterno)
 
         {
             this.UserName = pUserName;
@@ -32,7 +32,7 @@ namespace ProyectoTBD
             this.Nombre = pNombre;
             this.Paterno = pPaterno;
             this.Materno = pMaterno;
-            this.Ventas = pVentas;
+            //this.Ventas = pVentas;
             //this.Administrar = pAdministrar;
             //this.Reporte = pReporte;
             //this.Catalogo = pCatalogo;

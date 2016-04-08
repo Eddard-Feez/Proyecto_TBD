@@ -33,7 +33,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.txtRegistrar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +70,6 @@
             this.txtPass.TabIndex = 3;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPass.UseSystemPasswordChar = true;
-           
             // 
             // btnIniciar
             // 
@@ -82,22 +81,22 @@
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // txtRegistrar
+            // btnRegistrar
             // 
-            this.txtRegistrar.Location = new System.Drawing.Point(105, 180);
-            this.txtRegistrar.Name = "txtRegistrar";
-            this.txtRegistrar.Size = new System.Drawing.Size(77, 23);
-            this.txtRegistrar.TabIndex = 5;
-            this.txtRegistrar.Text = "Registrarse";
-            this.txtRegistrar.UseVisualStyleBackColor = true;
-            this.txtRegistrar.Click += new System.EventHandler(this.txtRegistrar_Click);
+            this.btnRegistrar.Location = new System.Drawing.Point(105, 180);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(77, 23);
+            this.btnRegistrar.TabIndex = 5;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 239);
-            this.Controls.Add(this.txtRegistrar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
@@ -118,6 +117,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button txtRegistrar;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
