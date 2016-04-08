@@ -1,0 +1,34 @@
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.exe.config
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.exe
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.pdb
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.exe
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.pdb
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\bin\Debug\MySql.Data.dll
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD(con Login).csprojResolveAssemblyReference.cache
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.BuscarProducto.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Form3.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Login.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.PantallaP.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Properties.Resources.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.UsuariosP.resources
+C:\Users\eddar\Desktop\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD(con Login).csproj.GenerateResource.Cache
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.exe.config
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.exe
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.pdb
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.exe
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\bin\Debug\ProyectoTBD.pdb
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\bin\Debug\MySql.Data.dll
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD(con Login).csprojResolveAssemblyReference.cache
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.BuscarProducto.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Form3.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Login.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.PantallaP.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Properties.Resources.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.UsuariosP.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD(con Login).csproj.GenerateResource.Cache
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.Control.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.formAccesoMySQL.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.pUnidadMedida.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.PantDepartamento.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.PantCliente.resources
+C:\Users\eddar\Desktop\TBD\ProyectoTBD\ProyectoTBD\obj\Debug\ProyectoTBD.PantVentas.resources
