@@ -41,19 +41,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnVenta = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.txtIdCaja = new System.Windows.Forms.TextBox();
+            this.txtIdUser = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIdVenta = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFolio = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -71,16 +74,16 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(429, 12);
+            this.groupBox1.Location = new System.Drawing.Point(328, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 254);
+            this.groupBox1.Size = new System.Drawing.Size(233, 173);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de venta";
             // 
             // btnGuardarDetalleV
             // 
-            this.btnGuardarDetalleV.Location = new System.Drawing.Point(55, 219);
+            this.btnGuardarDetalleV.Location = new System.Drawing.Point(149, 139);
             this.btnGuardarDetalleV.Name = "btnGuardarDetalleV";
             this.btnGuardarDetalleV.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarDetalleV.TabIndex = 3;
@@ -90,28 +93,29 @@
             // 
             // txtPrecioUdetalle
             // 
-            this.txtPrecioUdetalle.Location = new System.Drawing.Point(55, 151);
+            this.txtPrecioUdetalle.Location = new System.Drawing.Point(149, 89);
             this.txtPrecioUdetalle.Name = "txtPrecioUdetalle";
             this.txtPrecioUdetalle.Size = new System.Drawing.Size(75, 20);
             this.txtPrecioUdetalle.TabIndex = 2;
             // 
             // txtIVAdetalle
             // 
-            this.txtIVAdetalle.Location = new System.Drawing.Point(55, 190);
+            this.txtIVAdetalle.Location = new System.Drawing.Point(55, 139);
             this.txtIVAdetalle.Name = "txtIVAdetalle";
             this.txtIVAdetalle.Size = new System.Drawing.Size(75, 20);
             this.txtIVAdetalle.TabIndex = 2;
             // 
             // txtCantidadDetalle
             // 
-            this.txtCantidadDetalle.Location = new System.Drawing.Point(55, 112);
+            this.txtCantidadDetalle.Location = new System.Drawing.Point(55, 89);
             this.txtCantidadDetalle.Name = "txtCantidadDetalle";
             this.txtCantidadDetalle.Size = new System.Drawing.Size(75, 20);
             this.txtCantidadDetalle.TabIndex = 2;
+        
             // 
             // txtIdVentaDetalle
             // 
-            this.txtIdVentaDetalle.Location = new System.Drawing.Point(55, 73);
+            this.txtIdVentaDetalle.Location = new System.Drawing.Point(149, 34);
             this.txtIdVentaDetalle.Name = "txtIdVentaDetalle";
             this.txtIdVentaDetalle.Size = new System.Drawing.Size(75, 20);
             this.txtIdVentaDetalle.TabIndex = 2;
@@ -126,7 +130,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 174);
+            this.label5.Location = new System.Drawing.Point(37, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 1;
@@ -135,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 135);
+            this.label4.Location = new System.Drawing.Point(131, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 1;
@@ -144,7 +148,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 96);
+            this.label3.Location = new System.Drawing.Point(37, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 1;
@@ -153,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 57);
+            this.label2.Location = new System.Drawing.Point(131, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 1;
@@ -170,138 +174,168 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.btnVenta);
+            this.groupBox2.Controls.Add(this.txtTotal);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtSerie);
+            this.groupBox2.Controls.Add(this.txtIdCliente);
+            this.groupBox2.Controls.Add(this.txtIdCaja);
+            this.groupBox2.Controls.Add(this.txtIdUser);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtFolio);
+            this.groupBox2.Controls.Add(this.txtIdVenta);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtFecha);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(411, 254);
+            this.groupBox2.Size = new System.Drawing.Size(310, 224);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Nueva venta";
             // 
-            // label6
+            // btnVenta
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.btnVenta.Location = new System.Drawing.Point(201, 154);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(75, 23);
+            this.btnVenta.TabIndex = 12;
+            this.btnVenta.Text = "Venta";
+            this.btnVenta.UseVisualStyleBackColor = true;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
-            // dateTimePicker1
+            // txtTotal
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.txtTotal.Location = new System.Drawing.Point(60, 190);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(91, 20);
+            this.txtTotal.TabIndex = 10;
             // 
-            // label7
+            // label12
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "label7";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 197);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Total";
             // 
-            // label8
+            // txtSerie
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "label8";
+            this.txtSerie.Location = new System.Drawing.Point(60, 156);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(91, 20);
+            this.txtSerie.TabIndex = 10;
             // 
-            // label9
+            // txtIdCliente
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(135, 92);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "label9";
+            this.txtIdCliente.Location = new System.Drawing.Point(214, 89);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(80, 20);
+            this.txtIdCliente.TabIndex = 9;
             // 
-            // label10
+            // txtIdCaja
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(255, 91);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "label10";
+            this.txtIdCaja.Location = new System.Drawing.Point(60, 87);
+            this.txtIdCaja.Name = "txtIdCaja";
+            this.txtIdCaja.Size = new System.Drawing.Size(91, 20);
+            this.txtIdCaja.TabIndex = 9;
             // 
-            // textBox1
+            // txtIdUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(48, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtIdUser.Location = new System.Drawing.Point(60, 126);
+            this.txtIdUser.Name = "txtIdUser";
+            this.txtIdUser.Size = new System.Drawing.Size(91, 20);
+            this.txtIdUser.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 135);
+            this.label11.Location = new System.Drawing.Point(6, 156);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 8;
-            this.label11.Text = "label11";
+            this.label11.Text = "Serie";
             // 
-            // textBox3
+            // txtIdVenta
             // 
-            this.textBox3.Location = new System.Drawing.Point(49, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(80, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtIdVenta.Location = new System.Drawing.Point(60, 52);
+            this.txtIdVenta.Name = "txtIdVenta";
+            this.txtIdVenta.Size = new System.Drawing.Size(91, 20);
+            this.txtIdVenta.TabIndex = 6;
             // 
-            // textBox4
+            // label10
             // 
-            this.textBox4.Location = new System.Drawing.Point(169, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(80, 20);
-            this.textBox4.TabIndex = 9;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(156, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "ID cliente";
             // 
-            // textBox5
+            // label9
             // 
-            this.textBox5.Location = new System.Drawing.Point(302, 88);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(80, 20);
-            this.textBox5.TabIndex = 9;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "ID caja";
             // 
-            // textBox6
+            // label8
             // 
-            this.textBox6.Location = new System.Drawing.Point(57, 132);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(80, 20);
-            this.textBox6.TabIndex = 10;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 128);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "ID usuario";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(179, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Folio";
+            // 
+            // dtFecha
+            // 
+            this.dtFecha.Location = new System.Drawing.Point(9, 19);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(203, 20);
+            this.dtFecha.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ID venta";
+            // 
+            // txtFolio
+            // 
+            this.txtFolio.Location = new System.Drawing.Point(214, 50);
+            this.txtFolio.Name = "txtFolio";
+            this.txtFolio.Size = new System.Drawing.Size(80, 20);
+            this.txtFolio.TabIndex = 7;
             // 
             // PantVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 281);
+            this.ClientSize = new System.Drawing.Size(570, 245);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PantVentas";
             this.Text = "PantVentas";
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -325,18 +359,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.TextBox txtIdCliente;
+        private System.Windows.Forms.TextBox txtIdCaja;
+        private System.Windows.Forms.TextBox txtIdUser;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdVenta;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVenta;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtFolio;
     }
 }

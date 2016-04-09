@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Configuration;
+
+using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoTBD
 {
@@ -16,7 +20,14 @@ namespace ProyectoTBD
         public UsuariosP()
         {
             InitializeComponent();
+
         }
+
+        //static OleDbConnection cnnUsers;
+        //static OleDbDataAdapter daUsers;
+        //static OleDbCommandBuilder cbUsers;
+        //DataSet dsUsers = new DataSet("dsUsers");
+        //CurrencyManager cmUsers;
         bool Cventas;
         bool cAdministrar;
         bool cReportes;
@@ -26,11 +37,26 @@ namespace ProyectoTBD
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+        //    //Grabar
+        //    try
+        //    {
+        //        cmUsers.EndCurrentEdit();
+        //        if (cnnUsers.State == ConnectionState.Open)
+        //            cnnUsers.Close();
+        //        cnnUsers.Open();
+        //        daUsers.Update(dsUsers, "users");
+        //        cnnUsers.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message + "" + ex.StackTrace);
+        //    }
+
 
             string constring = "datasource = localhost;port=3306;username=eddard;password=mysql";
-            string Query = "insert into ventas.users(user_name, user_password, paterno, materno, nombre,ventas,administrar,reportes,catalogos,consultas,deshacer_venta)values('" 
-                + this.txtUserName.Text + "','" + this.txtUserPassword.Text + "','" + this.txtPaterno.Text + "','" + this.txtMaterno.Text + "','" + this.txtNombre.Text + "','" 
-                +  Cventas + "','" + cAdministrar + "','" + cReportes + "','" + cCatalogos + "','" + cConsultas + "','" + cDeshacer + "');";
+            string Query = "insert into ventas.users(user_name, user_password, paterno, materno, nombre,ventas,administrar,reportes,catalogos,consultas,deshacer_venta)values('"
+                + this.txtUserName.Text + "','" + this.txtUserPassword.Text + "','" + this.txtPaterno.Text + "','" + this.txtMaterno.Text + "','" + this.txtNombre.Text + "','"
+                + Cventas + "','" + cAdministrar + "','" + cReportes + "','" + cCatalogos + "','" + cConsultas + "','" + cDeshacer + "');";
             MySqlConnection conexion = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand(Query, conexion);
             MySqlDataReader myReader;
@@ -263,5 +289,63 @@ namespace ProyectoTBD
                 cDeshacer = false;
             }
         }
+
+        //       private void UsuariosP_Load(object sender, EventArgs e)
+        //       {
+        ////           this.Closing +=
+        ////new System.ComponentModel.
+        ////CancelEventHandler(frmUsers_Closing);
+        ////           cnnUsers = new OleDbConnection();
+        ////           daUsers = new OleDbDataAdapter();
+
+
+        //           daUsers.SelectCommand = new OleDbCommand("SELECT *" +
+        //               " FROM users", cnnUsers);
+        //           cbUsers = new OleDbCommandBuilder(daUsers);
+        //           if (cnnUsers.State == ConnectionState.Open)
+        //               cnnUsers.Close();
+        //           cnnUsers.Open();
+        //           dsUsers.Clear();
+        //           daUsers.Fill(dsUsers, "USERS");
+        //           txtUserName.DataBindings.Add("Text", dsUsers,
+        //                "users.user_name");
+        //           txtUserPassword.DataBindings.Add("Text", dsUsers,
+        //                "users.user_password");
+        //           txtPaterno.DataBindings.Add("Text", dsUsers,
+        //                "users.paterno");
+        //           txtMaterno.DataBindings.Add("Text", dsUsers,
+        //              "users.materno");
+        //           txtNombre.DataBindings.Add("Text", dsUsers,
+        //              "users.nombre");
+        //           cbVentas.DataBindings.Add("Checked", dsUsers,
+        //            "users.ventas", true);
+        //           cbAdministrar.DataBindings.Add("Checked", dsUsers,
+        //             "users.administrar", false);
+        //           cbReportes.DataBindings.Add("Checked", dsUsers,
+        //            "users.reportes", true);
+        //           cbCatalogos.DataBindings.Add("Checked", dsUsers,
+        //            "users.catalogos", true);
+        //           cbConsultas.DataBindings.Add("Checked", dsUsers,
+        //            "users.consultas", true);
+        //           cbDeshacerVenta.DataBindings.Add("Checked", dsUsers,
+        //            "users.deshacer_venta", true);
+        //           cmUsers = (CurrencyManager)this.BindingContext[dsUsers, "users"];
+        //           cnnUsers.Close();
+        //       }
+
+        //       void frmUsers_Closing(object sender,
+        //  System.ComponentModel.CancelEventArgs e)
+        //       {
+        //           try
+        //           {
+        //               if (cnnUsers.State == ConnectionState.Open)
+        //                   cnnUsers.Close();
+        //           }
+        //           catch (Exception ex)
+        //           {
+        //               MessageBox.Show(ex.Message);
+        //           }
+        //       }
+
     }
 }

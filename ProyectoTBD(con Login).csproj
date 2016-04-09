@@ -56,6 +56,7 @@
     <Compile Include="BuscarProducto.Designer.cs">
       <DependentUpon>BuscarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="principal.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Control.cs">
@@ -128,6 +129,7 @@
     <Compile Include="UsuariosP.Designer.cs">
       <DependentUpon>UsuariosP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventas.cs" />
     <EmbeddedResource Include="BuscarProducto.resx">
       <DependentUpon>BuscarProducto.cs</DependentUpon>
     </EmbeddedResource>

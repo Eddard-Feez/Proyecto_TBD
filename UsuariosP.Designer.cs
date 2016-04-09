@@ -138,7 +138,7 @@
             this.cbAdministrar.TabIndex = 10;
             this.cbAdministrar.Text = "Administrar";
             this.cbAdministrar.UseVisualStyleBackColor = true;
-            this.cbAdministrar.CheckedChanged += new System.EventHandler(this.cbAdministrar_CheckedChanged);
+     
             // 
             // cbReportes
             // 
@@ -149,7 +149,7 @@
             this.cbReportes.TabIndex = 11;
             this.cbReportes.Text = "Reportes";
             this.cbReportes.UseVisualStyleBackColor = true;
-            this.cbReportes.CheckedChanged += new System.EventHandler(this.cbReportes_CheckedChanged);
+          
             // 
             // cbCatalogos
             // 
@@ -160,7 +160,7 @@
             this.cbCatalogos.TabIndex = 12;
             this.cbCatalogos.Text = "Catalogos";
             this.cbCatalogos.UseVisualStyleBackColor = true;
-            this.cbCatalogos.CheckedChanged += new System.EventHandler(this.cbCatalogos_CheckedChanged);
+          
             // 
             // cbConsultas
             // 
@@ -171,7 +171,7 @@
             this.cbConsultas.TabIndex = 13;
             this.cbConsultas.Text = "Consultas";
             this.cbConsultas.UseVisualStyleBackColor = true;
-            this.cbConsultas.CheckedChanged += new System.EventHandler(this.cbConsultas_CheckedChanged);
+         
             // 
             // cbDeshacerVenta
             // 
@@ -182,7 +182,7 @@
             this.cbDeshacerVenta.TabIndex = 14;
             this.cbDeshacerVenta.Text = "Deshacer ventas";
             this.cbDeshacerVenta.UseVisualStyleBackColor = true;
-            this.cbDeshacerVenta.CheckedChanged += new System.EventHandler(this.cbDeshacerVenta_CheckedChanged);
+         
             // 
             // cbVentas
             // 
@@ -193,7 +193,7 @@
             this.cbVentas.TabIndex = 15;
             this.cbVentas.Text = "Ventas";
             this.cbVentas.UseVisualStyleBackColor = true;
-            this.cbVentas.CheckedChanged += new System.EventHandler(this.cbVentas_CheckedChanged);
+    
             // 
             // btnAgregar
             // 
@@ -240,6 +240,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UsuariosP";
             this.Text = "UsuariosP";
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 

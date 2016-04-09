@@ -17,7 +17,17 @@ namespace ProyectoTBD
         {
             InitializeComponent();
         }
-
+        public static bool _Logged = false;
+        public static string user = "";
+        public static string pat = "";
+        public static string mat = "";
+        public static string nom = "";
+        public static bool vent = false;
+        public static bool admin = false;
+        public static bool report = false;
+        public static bool catal = false;
+        public static bool consul = false;
+        public static bool deshac = false;
         private void btnIniciar_Click(object sender, EventArgs e)
         {
 
